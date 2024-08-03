@@ -15,6 +15,18 @@ describe("ISO 8601 Duration Parser", () => {
     });
   });
 
+  it("should parse a duration where an identifier without a preceding number defaults to 1", () => {
+    expect(parse("P3YM")).toEqual({
+      years: 3,
+      months: 1,
+      weeks: null,
+      days: null,
+      hours: null,
+      minutes: null,
+      seconds: null
+    });
+  });
+
   it("should parse a duration with only months", () => {
     expect(parse("P2M")).toEqual({
       years: null,
@@ -101,7 +113,7 @@ describe("ISO 8601 Duration Parser", () => {
 
   // Invalid Durations
   it("should throw an error for invalid format without P", () => {
-    expect(() => parse("1Y")).toThrow(  );
+    expect(() => parse("1Y")).toThrow();
   });
 
   it("should throw an error for invalid time format without T", () => {
