@@ -8,6 +8,14 @@
 			"problemMatcher": [],
 			"label": "npm: test",
 			"detail": "run all the tests and watch for changes"
+		},
+		{
+			"type": "npm",
+			"script": "performance:log",
+			"group": "none",
+			"problemMatcher": [],
+			"label": "npm: performance:log",
+			"detail": "tail collected perf logs"
 		}
 	]
 }
