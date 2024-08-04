@@ -8,7 +8,7 @@ function append(log) {
 
 const obs = new PerformanceObserver((list) => {
     list.getEntriesByType("function").forEach((e) => {
-        append(`${e.entryType}, ${e.name}, ${e.duration}, ${e?.detail}\n`);
+        append(`${e.entryType}, ${e.name}, ${e.duration.toFixed(4)}, ${e?.detail}\n`);
     });
     
     performance.clearMarks();
