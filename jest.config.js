@@ -5,12 +5,11 @@
 
 /** @type {import('jest').Config} */
 const config = {
+  watchPlugins: ["./__tests__/jestWatchPlugin.js"],
   clearMocks: true,
   coverageProvider: "v8",
   transform: {},
-  setupFiles: [
-    "./bin/build.js"
-  ]
+  testRegex: "/__tests__/.*(\\.|/)(test|spec)\\.[jt]sx?$",
 };
 
 export default config;

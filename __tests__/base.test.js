@@ -1,5 +1,5 @@
 import { describe, it, expect } from "@jest/globals";
-import { parse } from "../index.js";
+import { parse } from "./parser.js";
 
 describe("ISO 8601 Duration Parser", () => {
   // Valid Durations
